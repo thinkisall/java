@@ -1,14 +1,15 @@
+package com.jdk.java;
 import java.util.Arrays;
 
 public class Jvm extends Jdk{
     
-    static String jvmDefinition = "자바 프로그램을 실행하기 위한 가상머신";
-    static String classLoader;
-    static String RuntimeDataArea;
-    static String executionEngine;
-    static String garbageCollector;
+     String jvmDefinition = "자바 프로그램을 실행하기 위한 가상머신";
+     String classLoader;
+     String RuntimeDataArea;
+     String executionEngine;
+     String garbageCollector;
 
-    public static String[] runClassLoader(){
+    public String[] runClassLoader(){
         // 컴파일러가 소스코드를 바이트코드로 바꾸고나면 그 클래스파일을 처리하는 녀석
         classLoader = "클래스 파일을 메모리로 로딩하는 역할";
 
@@ -26,7 +27,7 @@ public class Jvm extends Jdk{
         
     }
 
-    public static String[] runRuntimeDataArea() {
+    public String[] runRuntimeDataArea() {
         RuntimeDataArea = "JVM 내에서 자바 애플리케이션이 실행되는 동안 데이터가 저장되는 메모리영역";
     
         String[] 데이터영역 = {
@@ -40,7 +41,7 @@ public class Jvm extends Jdk{
         return 데이터영역;
     }
 
-    public static void runExeEngine(String sourceCode){
+    public void runExeEngine(String sourceCode){
         executionEngine = "바이트코드를 실행하는 역할 인터프리터방식+JIT컴파일러방식으로 구현";
         String[] JIT = 
         {"바이트코드를 기계어로 바꿔주는 역할", 
@@ -51,7 +52,7 @@ public class Jvm extends Jdk{
         
     }
 
-    public static void runGarbageCollector(){
+    public void runGarbageCollector(){
         String[] 설명 = 
             {"자바에서 메모리는 자동으로 관리된다.",
             "단, 더 이상 필요하지 않은 객체는 가비지컬렉터가 회수한다",
@@ -72,7 +73,7 @@ public class Jvm extends Jdk{
         System.out.println("주의사항 = "+Arrays.toString(주의사항));
     }
     
-    public static void main(String[] args) {
+    public void main(String[] args) {
         // 자바 클래스 로더
         String[] result = runClassLoader();
         for(String item : result){
