@@ -4,6 +4,8 @@ public class Test {
     public static void main(String[] args) {
         Employee e1 = new Employee();
         Employee e2 = new Employee();
+
+        System.out.println(Employee.getSerialNum());
         
         e1.setEmployeeName("Lee");
         e2.setEmployeeName("Kim");
@@ -13,6 +15,8 @@ public class Test {
 
         e1.showInfo();
         e2.showInfo();
+
+        
 
     
         
