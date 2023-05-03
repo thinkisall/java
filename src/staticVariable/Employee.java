@@ -2,7 +2,7 @@ package staticVariable;
 
 public class Employee {
 
-    public static int serialNum = 1000;
+    private static int serialNum = 1000;
 
     private int EmployeeId;
     private String EmployeeName;
@@ -14,6 +14,10 @@ public class Employee {
     public Employee(){
         serialNum++;
         EmployeeId = serialNum;
+    }
+
+    public static int getSerialNum() {
+        return serialNum;
     }
 
     public int getEmployeeId() {
