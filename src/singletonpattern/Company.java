@@ -3,6 +3,7 @@ package singletonpattern;
 public class Company {
 
     private static Company instance = new Company();
+    private Company(){}
 
     public static Company getInstance(){
         if(instance == null){
@@ -11,10 +12,8 @@ public class Company {
         return instance;
     }
 
-    private Company(){
-        
-    }
 
 
-    
+
+
 }
