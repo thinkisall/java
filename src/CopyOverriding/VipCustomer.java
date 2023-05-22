@@ -5,11 +5,11 @@ public class VipCustomer extends Customer{
     double saleRatio;
 
     public VipCustomer(int customerID, String customerName, int bonusPoint) {
-        super(customerID, customerName,bonusPoint);
+        super(customerID, customerName, bonusPoint);
         this.bonusPoint = bonusPoint;
         customerGrade = "VIP";
         bonusRatio = 0.05;
-        saleRatio = 0.1;
+        saleRatio = 0.2;
     }    
     
     @Override
